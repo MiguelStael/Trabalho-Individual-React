@@ -1,0 +1,28 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+    z-index: 50
+}
+
+.brand a {
+    color: #e50914;
+    font-weight: 900;
+    font-size: 28px;
+    text-decoration: none
+}
+
+.nav a {
+    color: white;
+    text-decoration: none
+}
+
+.shadow {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), transparent);
+}
