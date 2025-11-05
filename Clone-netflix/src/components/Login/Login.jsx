@@ -11,10 +11,11 @@ export default function Login() {
     const [error, setError] = useState('')
     const navigate = useNavigate()
 
-    function handleSubmit(e) {
-        e.preventDefault()
-        if (!email || !password) { setError('Preencha email e senha'); return }
-        // fake auth
+    function handleLoginClick() {
+        if (!email || !password) {
+            setError('Preencha email e senha')
+            return
+        }
         navigate('/home')
     }
 
@@ -23,6 +24,7 @@ export default function Login() {
             <Header showShadow />
             <div className={styles.hero}>
                 <div className={styles.overlay} />
+
                 <div className={styles.centerBox}>
                     <h1 className={styles.title}>Filmes, séries e muito mais.</h1>
                     <p className={styles.subtitle}>Assista onde quiser. Cancele quando quiser.</p>
@@ -30,13 +32,35 @@ export default function Login() {
 
                 <div className={styles.loginBox}>
                     <h2>Entrar</h2>
-                    <form onSubmit={handleSubmit} className={styles.form}>
-                        <Input label="Email" type="email" value={email} onChange={setEmail} placeholder="seu@email.com" />
-                        <Input label="Senha" type="password" value={password} onChange={setPassword} placeholder="Senha" />
+
+                    { }
+                    <div className={styles.form}>
+                        <Input
+                            label="Email"
+                            type="email"
+                            value={email}
+                            onChange={setEmail}
+                            placeholder="seu@email.com"
+                        />
+
+                        <Input
+                            label="Senha"
+                            type="password"
+                            value={password}
+                            onChange={setPassword}
+                            placeholder="Senha"
+                        />
+
                         {error && <div className={styles.error}>{error}</div>}
-                        <Button type="submit">Entrar</Button>
-                        <div className={styles.remember}>Novo por aqui? <a href="#">Assine agora</a></div>
-                    </form>
+
+                        <Button type="button" onClick={handleLoginClick}>
+                            Entrar
+                        </Button>
+
+                        <div className={styles.remember}>
+                            Novo por aqui? <a href="#">Assine agora</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
