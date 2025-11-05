@@ -1,0 +1,94 @@
+.page {
+    min-height: 100vh;
+    background: #000;
+    color: white
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: url('https://picsum.photos/1400/800');
+    background-size: cover;
+    background-position: center
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.85) 60%)
+}
+
+.centerBox {
+    position: absolute;
+    left: 48px;
+    top: 120px;
+    max-width: 520px
+}
+
+.title {
+    font-size: 48px;
+    margin: 0 0 12px 0
+}
+
+.subtitle {
+    font-size: 20px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9)
+}
+
+.loginBox {
+    position: absolute;
+    right: 48px;
+    top: 120px;
+    width: 360px;
+    background: rgba(0, 0, 0, 0.72);
+    padding: 28px;
+    border-radius: 6px
+}
+
+.loginBox h2 {
+    margin: 0 0 16px 0
+}
+
+.form {
+    display: flex;
+    flex-direction: column
+}
+
+.error {
+    background: #b32929;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 8px
+}
+
+.remember {
+    margin-top: 12px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8)
+}
+
+.remember a {
+    color: #e50914;
+    text-decoration: none;
+    font-weight: 700
+}
+
+@media (max-width:900px) {
+    .centerBox {
+        left: 28px;
+        top: 80px
+    }
+
+    .loginBox {
+        position: static;
+        margin: 24px auto 0 auto;
+        max-width: 360px
+    }
+
+    .hero {
+        height: 120vh;
+        padding-bottom: 60px
+    }
+}

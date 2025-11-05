@@ -1,0 +1,100 @@
+.page {
+    background: #000;
+    color: white;
+    min-height: 100vh
+}
+
+.container {
+    max-width: 1200px;
+    margin: 120px auto 60px;
+    padding: 0 20px
+}
+
+.banner {
+    height: 420px;
+    background-image: url('https://picsum.photos/1400/600?grayscale');
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
+    margin-bottom: 28px;
+    position: relative;
+    overflow: hidden
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9))
+}
+
+.bannerContent {
+    position: relative;
+    padding: 36px
+}
+
+.bannerTitle {
+    font-size: 36px;
+    margin: 0 0 10px 0
+}
+
+.bannerText {
+    max-width: 640px;
+    color: rgba(255, 255, 255, 0.9)
+}
+
+.bannerActions {
+    margin-top: 16px
+}
+
+.play {
+    background: #fff;
+    color: #000;
+    padding: 10px 16px;
+    border-radius: 4px;
+    border: 0;
+    font-weight: 700;
+    margin-right: 8px
+}
+
+.more {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 4px;
+    border: 0
+}
+
+.row {
+    margin-top: 18px
+}
+
+.rowTitle {
+    margin: 0 0 10px 0
+}
+
+.rowInner {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 8px
+}
+
+.rowInner::-webkit-scrollbar {
+    height: 8px
+}
+
+.rowInner::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 4px
+}
+
+@media (max-width:800px) {
+    .banner {
+        height: 320px
+    }
+
+    .container {
+        margin-top: 80px
+    }
+}

@@ -1,0 +1,34 @@
+.card {
+    width: 220px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #111;
+    flex: 0 0 auto;
+    transition: transform .2s
+}
+
+.card:hover {
+    transform: scale(1.06)
+}
+
+.img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    display: block
+}
+
+.info {
+    padding: 10px
+}
+
+.title {
+    margin: 0;
+    font-size: 15px
+}
+
+.subtitle {
+    margin: 6px 0 0 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px
+}
